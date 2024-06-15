@@ -61,7 +61,7 @@ MariaDB là một sản phẩm mã nguồn mở tách ra từ mã mở do cộng
 Quý khách tiến hành cài đặt MariaDB bằng lệnh
 
 ```
-sudo apt install mariadb\* -y
+sudo apt install mariadb-server -y
 ```
 
 Sau đó cho bật MariaDB và cho phép tiến trình khởi động cùng hệ thống
