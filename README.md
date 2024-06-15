@@ -81,7 +81,7 @@ systemctl status mariadb
 Tiếp theo Quý khách cần cấu hình cho MariaDB bằng lệnh
 
 ```
-mysql\_secure\_installation
+mysql_secure_installation
 ```
 
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.006.png)
