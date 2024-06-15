@@ -1,6 +1,6 @@
-﻿HƯỚNG DẪN TRIỂN KHAI LEMP ( LINUX + nginx-Ex + MARIADB + PHPmyAdmin) KẾT HỢP WORDPRESS TRÊN UBUNTU 22.04
+# ﻿HƯỚNG DẪN TRIỂN KHAI LEMP ( LINUX + nginx-Ex + MARIADB + PHPmyAdmin) KẾT HỢP WORDPRESS TRÊN UBUNTU 22.04
 
-1. **CHUẨN BỊ CƠ BẢN**
+## I. **CHUẨN BỊ CƠ BẢN**
 
 Sau khi đăng nhập, Quý khách tiến hành thay đổi đường dẫn Repository cho VPS Ubuntu của chúng ta, nhằm tăng tốc độ tải và cài đặt các gói phần mềm cần thiết. Đầu tiên là lệnh lấy các đường dẫn khả dụng gần chúng ta nhất:
 
@@ -24,11 +24,11 @@ Sau đó quý khách tiến hành chạy lệnh update để cập nhật Reposi
 
 sudo apt update
 
-1. **TRIỂN KHAI LEMP**
+## II. **TRIỂN KHAI LEMP**
 
 Do Ubuntu là một hệ điều hành linux nên Quý khách sẽ chuyển sang 3 thành phần còn lại.
 
-1. **Nginx-E**
+### 1. **Nginx-E**
 
 NGINX, đọc là “engine-ex,” là một phần mềm web server mã nguồn mở nỗi tiếng. Ban đầu nó dùng để phục vụ web HTTP. Tuy nhiên, ngày nay nó cũng được dùng làm reverse proxy, HTTP load balancer và email proxy như IMAP, POP3, và SMTP.
 
@@ -54,7 +54,7 @@ systemctl status nginx
 
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.004.png)
 
-1. **MariaDB**
+#### 2. **MariaDB**
 
 MariaDB là một sản phẩm mã nguồn mở tách ra từ mã mở do cộng đồng phát triển của hệ quản trị cơ sở dữ liệu quan hệ MySQL nhằm theo hướng không phải trả phí với GNU GPL. MariaDB được phát triển từ sự dẫn dắt của những nhà phát triển ban đầu của MySQL, do lo ngại khi MySQL bị Oracle Corporation mua lại.
 
@@ -104,7 +104,7 @@ Tới đây là Quý khách đã cấu hình thành công MariaDB
 
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.013.png)
 
-1. **PHP**
+### 3. **PHP**
 
 Ngôn ngữ PHP là từ viết tắt của Personal Home Page (hiện nay là Hypertext Preprocessor). Thuật ngữ này chỉ chuỗi ngôn ngữ kịch bản hay mã lệnh, phù hợp để phát triển cho các ứng dụng nằm trên máy chủ. Khi viết phần mềm bằng ngôn ngữ PHP, chuỗi lệnh sẽ được xử lý trên server để từ đó sinh ra mã HTML trên client. Và dựa vào đó, các ứng dụng trên website của bạn sẽ hoạt động một cách dễ dàng.
 
@@ -128,8 +128,8 @@ Kiểm tra phiên bản PHP đã được cài đặt
 
 
 
-1. **CÀI ĐẶT VÀ CẤU HÌNH WORDPRESS**
-1. **Cấu hình Database** 
+## III. **CÀI ĐẶT VÀ CẤU HÌNH WORDPRESS**
+### 1. **Cấu hình Database** 
 
 Quý khách sử dụng lệnh để truy cập vào MariaDB và nhập mật khẩu đã cấu hình:
 
@@ -169,7 +169,7 @@ EXIT;
 
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.020.png)
 
-1. **Cài đặt Wordpress**
+### 2. **Cài đặt Wordpress**
 
 Đầu tiên, Quý khách cài đặt Wordpress bằng lệnh sau:
 
@@ -229,8 +229,8 @@ Khởi động lại dịch vụ nginx:
 systemctl restart nginx
 ```
 
-1. **Sử dụng Wordpress**
-1. **Kết nối Database**
+### 3. **Sử dụng Wordpress**
+#### a. **Kết nối Database**
 
 Sau khi hoàn tất quá trình cài đặt, Quý khách đã có thể sử dụng Wordpress bằng cách truy cập bằng địa chỉ IP của VPS. Chọn ngôn ngữ:
 
@@ -244,7 +244,7 @@ Tiếp theo, Quý khách cần nhập database và tài khoản user name đã t
 
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.025.png)
 
-1. **Tạo Site**
+#### b. **Tạo Site**
 
 Quý khách nhập thông tin cho website của mình:
 
@@ -262,8 +262,8 @@ Nếu quý khách muốn chỉnh sửa trang web của mình, thêm wp-login.php
 
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.030.png)
 
-1. **Thêm https , trỏ domain về trang web**
-1. **Trỏ domain về trang web**
+## IV. **Thêm https , trỏ domain về trang web**
+### 1. **Trỏ domain về trang web**
 
 Để trỏ tên miền về WordPress, Quý khách cần phải có thông tin về tên miền. Nếu Quý khách chưa có tên miền hãy liên hệ ngay với vinahost.vn để được tư vấn đăng ký. Sau đó, toàn bộ thông tin về tên miền sẽ được gửi cho Quý khách.
 
@@ -276,7 +276,7 @@ Sau khi save Record DNS, Quý khách kiểm tra kết quả
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.032.png)
 
 
-1. **Https**
+### 2. **Https**
 
 HTTPS (Hypertext Transfer Protocol Secure) là giao thức truyền tải siêu văn bản an toàn. Thực chất, đây chính là giao thức HTTP nhưng tích hợp thêm Chứng chỉ bảo mật SSL nhằm mã hóa các thông điệp giao tiếp để tăng tính bảo mật. Có thể hiểu, HTTPS là phiên bản HTTP an toàn, bảo mật hơn.
 
