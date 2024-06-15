@@ -6,7 +6,7 @@ Sau khi đăng nhập, Quý khách tiến hành thay đổi đường dẫn Repo
 
 wget -qO - mirrors.ubuntu.com/mirrors.txt
 
-![](Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.001.png)
+![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.001.png)
 
 Quý khách chọn một trong những đường dẫn trên để có thể nhập vào file cấu hình, ví dụ ở đây Quý khách chọn đường link của viettelcloud. Sau đó truy cập file Repository bằng lệnh:
 
