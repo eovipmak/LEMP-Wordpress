@@ -124,6 +124,10 @@ sudo apt install php8.3 -y
 
 Kiểm tra phiên bản PHP đã được cài đặt
 
+```
+php -v
+```
+
 ![](a/Aspose.Words.f1da093e-33af-4a10-b03b-94ceee674c33.015.png)
 
 
