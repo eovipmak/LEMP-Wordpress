@@ -35,7 +35,7 @@ NGINX, đọc là “engine-ex,” là một phần mềm web server mã nguồn
 Quý khách tiến hành cài đặt Nginx-E
 
 ```
-sudo apt install  nginx -y
+sudo apt install  nginx -y nginx-extras
 ```
 
 Sau đó cho bật Nginx-E và cho phép tiến trình khởi động cùng hệ thống
@@ -119,7 +119,7 @@ sudo add-apt-repository ppa:ondrej/php -y && sudo apt update
 Sau đó Quý khách tiến hành cài đặt PHP vào máy, ví dụ Quý khách chọn phiên bản 8.3
 
 ```
-sudo apt install php8.3 -y
+sudo apt install php8.3 php8.3-mysqli -y
 ```
 
 Kiểm tra phiên bản PHP đã được cài đặt
@@ -215,7 +215,7 @@ server {
 
   index index.html index.php; 
 
-    location - \.php$ { 
+    location ~ \.php$ { 
 
     include snippets/fastcgi-php.conf; 
 
